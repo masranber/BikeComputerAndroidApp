@@ -85,7 +85,7 @@ public class BikeComputerViewModel extends ViewModel implements BikeComputerDevi
 
         // Set the initial trip conditions
         tripStartMillis = SystemClock.elapsedRealtime();
-        DeviceData initialData = BikeComputerDevice.getDevice().deviceData.getValue();
+        DeviceData initialData = bikeComputerDevice.deviceData.getValue();
         tripStartRotations = initialData.getTotalRotations();
         Log.i("ViewModel", "Start trip");
         tripIsStarted = true;
@@ -102,7 +102,7 @@ public class BikeComputerViewModel extends ViewModel implements BikeComputerDevi
     @Override
     public void onConnect() {
         controlState.setValue(ControlButton.State.BEGIN_TRIP);
-        BikeComputerDevice.getDevice().deviceData.observeForever(BikeComputerViewModel.this);
+        bikeComputerDevice.deviceData.observeForever(BikeComputerViewModel.this);
     }
 
     @Override
@@ -110,7 +110,7 @@ public class BikeComputerViewModel extends ViewModel implements BikeComputerDevi
         Log.i("ViewModel", "Device disconnect");
         Log.e("ViewModel", "Reason: "+reason.toString());
         controlState.setValue(ControlButton.State.DISCONNECTED);
-        BikeComputerDevice.getDevice().deviceData.removeObserver(BikeComputerViewModel.this);
+        bikeComputerDevice.deviceData.removeObserver(BikeComputerViewModel.this);
         if(reason == BikeComputerDevice.BTError.BT_OFF) {
             actionRequiredEvent.setValue(new Event<>(Action.REQUEST_BLUETOOTH));
         }
