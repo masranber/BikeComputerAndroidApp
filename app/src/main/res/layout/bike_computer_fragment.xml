@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.BikeComputerFragment"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/ic_baseline_settings_24"/>
+
+    <com.masranber.bikecomputer.widgets.TripDisplay
+        android:id="@+id/trip_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <com.masranber.bikecomputer.widgets.Speedometer
+        android:id="@+id/speedometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <com.masranber.bikecomputer.widgets.GearIndicator
+        android:id="@+id/gear_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/speedometer"/>
+
+    <com.masranber.bikecomputer.ControlButton
+        android:id="@+id/trip_control_button"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_button_bg_selector_blue"
+        android:elevation="8dp"
+        android:text="CONNECT"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorTextPrimary"
+        />
+
+</RelativeLayout>

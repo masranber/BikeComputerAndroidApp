@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="4"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="22sp"
+        android:text="TIME"/>
+
+    <TextView
+        android:id="@+id/trip_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="22sp"
+        android:text="00:00:00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="22sp"
+        android:text="DIST"/>
+
+    <TextView
+        android:id="@+id/trip_distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="22sp"
+        android:text="0.0 mi"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="22sp"
+        android:text="RPM"/>
+
+    <TextView
+        android:id="@+id/trip_rpm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="22sp"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="22sp"
+        android:text="AVG"/>
+
+    <TextView
+        android:id="@+id/trip_avgspeed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="22sp"
+        android:text="0.0 mph"/>
+
+</GridLayout>

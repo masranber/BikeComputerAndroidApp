@@ -1,0 +1,109 @@
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="General"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="units"
+            app:summaryOff="Imperial (mph, mi)"
+            app:summaryOn="Metric (kph, km)"
+            app:title="Display Units"
+            app:iconSpaceReserved="false"
+            app:defaultValue="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="auto_connect"
+            app:summary="Connect to bike computer automatically when app starts"
+            app:title="Connect Automatically"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="use_gps"
+            app:summary="Use GPS to improve distance and speed accuracy"
+            app:title="Use GPS"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="dark_mode"
+            app:summary="Saves battery (OLED only) and makes screen less distracting at night"
+            app:title="Dark Mode"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Calibration"
+        app:iconSpaceReserved="false">
+
+        <DropDownPreference
+            app:key="wheel_diameter"
+            app:title="Wheel Diameter"
+            app:summary="Used for distance and speed calculations\nCurrent: %s"
+            app:entries="@array/standard_wheel_sizes"
+            app:entryValues="@array/standard_wheel_inches"
+            app:iconSpaceReserved="false"/>
+
+        <Preference
+            app:key="calibrate"
+            app:title="Calibrate"
+            app:summary="Press to begin bike computer calibration"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Trips"
+        app:iconSpaceReserved="false">
+
+        <Preference
+        app:key="trip_setting1"
+        app:title="Trip Setting"
+        app:summary="Description of what this setting does"
+        app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Lights"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="auto_lights"
+            app:summary="Automatically turn on headlight and taillight when it's dark"
+            app:title="Automatic Lights"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="taillight_mode"
+            app:summaryOn="Constant flashing"
+            app:summaryOff="When brakes applied"
+            app:title="Taillight Mode"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="About"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            app:key="version"
+            app:title="Version (Build)"
+            app:summary="1.0 (4)"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            app:key="libraries"
+            app:title="3rd Party Libraries"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
